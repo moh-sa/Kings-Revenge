@@ -178,14 +178,17 @@ function animate() {
 animate();
 
 addEventListener("keydown", () => {
-  switch (event.key) {
-    case "d":
+  switch (event.code) {
+    case "KeyD":
+    case "ArrowRight":
       keys.d.isPressed = true;
       break;
-    case "a":
+    case "KeyA":
+    case "ArrowLeft":
       keys.a.isPressed = true;
       break;
-    case "w":
+    case "KeyW":
+    case "ArrowUp":
       player.velocity.y = -4;
       break;
 
@@ -195,11 +198,13 @@ addEventListener("keydown", () => {
 });
 
 addEventListener("keyup", () => {
-  switch (event.key) {
-    case "d":
+  switch (event.code) {
+    case "KeyD":
+    case "ArrowRight":
       keys.d.isPressed = false;
       break;
-    case "a":
+    case "KeyA":
+    case "ArrowLeft":
       keys.a.isPressed = false;
       break;
 
