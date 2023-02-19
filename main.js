@@ -49,7 +49,7 @@ platformCollisions2D.forEach((row, y) => {
   });
 });
 
-const gravity = 0.1;
+const gravity = 0.08;
 
 const player = new Player({
   position: { x: 100, y: 300 },
@@ -148,12 +148,12 @@ function animate() {
   player.velocity.x = 0;
   if (keys.d.isPressed) {
     player.switchSprite("Run");
-    player.velocity.x = 1.0;
+    player.velocity.x = 0.7;
     player.lastDirection = "right";
     player.shouldPanCameraToTheLeft({ canvas, camera });
   } else if (keys.a.isPressed) {
     player.switchSprite("RunLeft");
-    player.velocity.x = -1.5;
+    player.velocity.x = -0.7;
     player.lastDirection = "left";
     player.shouldPanCameraToTheRight({ canvas, camera });
   } else if (player.velocity.y === 0) {
@@ -189,7 +189,7 @@ addEventListener("keydown", () => {
       break;
     case "KeyW":
     case "ArrowUp":
-      player.velocity.y = -4;
+      player.velocity.y = -3;
       break;
 
     default:
