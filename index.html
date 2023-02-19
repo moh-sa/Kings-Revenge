@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <div>
+        <h1>
+          Created by <a href="http://tno.dev">Mohammed Sobhi</a> with Vanilla JS
+        </h1>
+        <p>
+          based on a tutorial by
+          <a href="https://youtu.be/rTVoyWu8r6g">Chris Courses</a>
+        </p>
+      </div>
+      <div id="boxes">
+        <span>
+          <input type="checkbox" id="hitbox" name="hitbox" value="hitbox" />
+          <label for="hitbox"> Toggle hit-box</label>
+        </span>
+        <span>
+          <input
+            type="checkbox"
+            id="camerabox"
+            name="camerabox"
+            value="camerabox"
+          />
+          <label for="camerabox"> Toggle camera-box</label>
+        </span>
+        <span>
+          <input type="checkbox" id="blocks" name="blocks" value="blocks" />
+          <label for="blocks"> Toggle collision blocks</label>
+        </span>
+      </div>
+      <canvas></canvas>
+    </div>
+  </body>
+  <script src="./js/utils.js"></script>
+  <script src="./js/classes/CollisionBlock.js"></script>
+  <script src="./js/classes/Sprite.js"></script>
+  <script src="./js/classes/Player.js"></script>
+  <script src="./js/data/floorCollisions.js"></script>
+  <script src="./js/data/platformCollisions.js"></script>
+  <script src="main.js"></script>
+</html>
